@@ -14,6 +14,22 @@ function index(req, res) {
   })
 }
 
+function show(req, res) {
+  Photo.findById(req.params.id)
+  .populate("owner")
+  .then(photo => {
+    res.render('photos/show', {
+      photo,
+      title: "show"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/photos')
+  })
+}
+
 export {
-  index
+  index,
+  show
 }

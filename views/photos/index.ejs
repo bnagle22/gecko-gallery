@@ -3,6 +3,14 @@
 
 <section>
   <h1>Gecko Gallery</h1>
+  <ul>
+    <% photos.forEach(photo => { %>
+      <li>
+        <a href="/photos/<%= photo._id %>"><%= photo.name %> </a>
+      </li> 
+      <% }) %> 
+  </ul>
+
 </section>
 
 
