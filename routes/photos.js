@@ -10,6 +10,9 @@ router.get('/', photosCtrl.index)
 // localhost:3000/photos/:id - GET
 router.get('/:id', photosCtrl.show)
 
+// localhost:3000/photos/ - POST
+router.post('/', photosCtrl.create)
+
 export {
   router
 }

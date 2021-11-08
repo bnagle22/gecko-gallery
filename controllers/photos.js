@@ -29,7 +29,20 @@ function show(req, res) {
   })
 }
 
+function create(req, res) {
+  req.body.owner = req.user.profile._id
+  Photo.create(req.body)
+  .then(photo => {
+    res.redirect('/photos')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/photos')
+  })
+}
+
 export {
   index,
-  show
+  show,
+  create
 }

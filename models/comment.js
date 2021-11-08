@@ -6,6 +6,8 @@ const commentSchema = new Schema({
   content: String,
   author: {type: Schema.Types.ObjectId, ref:'Profile'},
   likes: Number
+}, {
+  timestamps: true
 })
 
 const Comment = mongoose.model("Comment", commentSchema)

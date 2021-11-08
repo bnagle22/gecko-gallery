@@ -7,6 +7,8 @@ const photoSchema = new Schema({
   image: String,
   owner: {type: Schema.Types.ObjectId, ref:'Profile'},
   likes: Number
+}, {
+  timestamps: true
 })
 
 const Photo = mongoose.model("Photo", photoSchema)

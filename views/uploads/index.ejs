@@ -3,9 +3,22 @@
 
 <section>
   <h1>Gecko Gallery</h1>
-  <button>Upload Photo</button>
-</section>
+  <!-- <form action="upload/post" method="post" enctype="multipart/form-data">
+    <input type="file" id="image-input" accept="image/png, image/jpg, image/gif">
+    <button type="submit" name="upload">Upload</button>
+  </form>
+  <div id="display-image"></div> -->
+  <h2>Upload Image</h2>
+  <form action="/photos" method="POST">
+    <label>
+      Photo URL:
+      <input type="text" name="photo" autocomplete="off">
+    </label>
+    <button type="submit">Add photo</button>
+  </form>
+  
 
+</section>
 
 
 
