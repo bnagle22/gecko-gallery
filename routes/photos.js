@@ -14,7 +14,9 @@ router.get('/new', photosCtrl.new)
 router.get('/:id', photosCtrl.show)
 
 // localhost:3000/photos/ - POST
-router.post('/', photosCtrl.create)
+router.post('/', isLoggedIn, photosCtrl.create)
+
+
 
 export {
   router

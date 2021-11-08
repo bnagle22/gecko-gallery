@@ -20,7 +20,8 @@ function show(req, res) {
   .then(photo => {
     res.render('photos/show', {
       photo,
-      title: "show"
+      title: "show",
+      image: photo.image
     })
   })
   .catch(err => {
