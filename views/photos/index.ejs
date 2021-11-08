@@ -6,15 +6,22 @@
   <ul>
     <% photos.forEach(photo => { %>
       <li>
-        <a href="/photos/<%= photo._id %>"><%= photo.name %> </a>
+        <a href="/photos/<%= photo._id %>"><%= photo.name %>
+          
+          <!-- Placeholder image: -->
+            <img src="https://i.imgur.com/xElo1Sm.jpg" width="400">
+        </a>
+        
       </li> 
       <% }) %> 
   </ul>
-  <section>
+
+
+  <!-- <section>
     <div>Title</div>
     <img src="https://i.imgur.com/xElo1Sm.jpg" width="300">
     <p>Gecko sitting in bowl</p>
-  </section>
+  </section> -->
 
 </section>
 

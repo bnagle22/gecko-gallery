@@ -30,7 +30,7 @@ function show(req, res) {
 }
 
 function create(req, res) {
-  req.body.owner = req.user.profile._id
+  // req.body.owner = req.user.profile._id
   Photo.create(req.body)
   .then(photo => {
     res.redirect('/photos')
@@ -41,8 +41,13 @@ function create(req, res) {
   })
 }
 
+function newPhoto(req, res) {
+  res.render('photos/new')
+}
+
 export {
   index,
   show,
-  create
+  create,
+  newPhoto as new
 }
