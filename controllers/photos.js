@@ -1,5 +1,4 @@
 import { Photo } from '../models/photo.js'
-import { Comment } from '../models/comment.js'
 
 function index(req, res) {
   Photo.find({})
@@ -31,7 +30,7 @@ function show(req, res) {
 }
 
 function create(req, res) {
-  // req.body.owner = req.user.profile._id
+  req.body.owner = req.user.profile._id
   Photo.create(req.body)
   .then(photo => {
     res.redirect('/photos')
@@ -51,7 +50,9 @@ function newComment(req, res) {
     photo.comments.push(req.body)
     console.log(photo)
     photo.save(function(err) {
-      res.redirect(`/photos/${photo._id}`)
+      res.render('photos/show', {
+        photo
+      })
     })
   })
 }

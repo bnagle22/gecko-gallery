@@ -19,7 +19,7 @@ router.post('/', isLoggedIn, photosCtrl.create)
 // localhost:3000/photos/:id - POST
 router.post('/:id', isLoggedIn, photosCtrl.comment)
 
-// localhost:3000/photos/:id - DELETE
+// localhost:3000/photos- DELETE
 router.delete('/:id', isLoggedIn, photosCtrl.delete)
 
 export {
