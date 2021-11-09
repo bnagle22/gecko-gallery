@@ -1,4 +1,5 @@
 import { Photo } from '../models/photo.js'
+import { Comment } from '../models/comment.js'
 
 function index(req, res) {
   Photo.find({})
@@ -21,7 +22,6 @@ function show(req, res) {
     res.render('photos/show', {
       photo,
       title: "show",
-      image: photo.image
     })
   })
   .catch(err => {
@@ -46,9 +46,38 @@ function newPhoto(req, res) {
   res.render('photos/new')
 }
 
+function newComment(req, res) {
+  Photo.findById(req.params.id, function(error, photo) {
+    photo.comments.push(req.body)
+    console.log(photo)
+    photo.save(function(err) {
+      res.redirect(`/photos/${photo._id}`)
+    })
+  })
+}
+
+function deletePhoto(req, res) {
+  Photo.findById(req.params.id)
+  .then(photo => {
+    if (photo.owner.equals(req.user.profile._id)) {
+      photo.delete()
+      .then(() => {
+        res.redirect('/photos')
+      })
+    } else {
+      throw new Error("Not authorized")
+    }
+  })
+  .catch(err => {
+    res.redirect('/photos')
+  })
+}
+
 export {
   index,
   show,
   create,
-  newPhoto as new
+  newPhoto as new,
+  newComment as comment,
+  deletePhoto as delete
 }

@@ -2,13 +2,23 @@
 <%- include('../partials/nav') %>
 
 <section id="main-photo">
-  <div>photo.title</div>
+  <div>title</div>
   <img src="<%= photo.image %>" width="500">
-  <p>photo.caption</p>
+  <p>caption</p>
+  <%# if (photo.owner.equals(user?.profile._id)) { %>
+    <!-- <form action="/tacos/<%# photo._id %>?_method=DELETE" method="POST">
+      <button class="btn" type="submit">Delete this photo</button>
+    </form> -->
+  <%# } %>
 </section>
 
-<section id="comments">
-  <h1>Comments</h1>
+
+
+  <form action="/photos/<%= photo._id %>" method="POST">
+    <label for="content-textarea">Comment:</label>
+    <textarea name="content" id="content-textarea"></textarea>
+    <button type="submit">Add Comment</button>
+  </form>
 </section>
 
 <%- include('../partials/footer') %>
