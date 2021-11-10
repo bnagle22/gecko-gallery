@@ -21,7 +21,7 @@ body {
   background: rgb(222, 128, 29);
   background-image: url(../images/sand1.jpg);
   background-size: cover;
-  background-repeat: space;
+  background-repeat: repeat-y;
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -29,7 +29,7 @@ body {
 }
 
 nav {
-  background-color: white;
+  background-color: rgb(222, 128, 29);
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
@@ -48,19 +48,49 @@ h1 {
 
 li {
   display: inline;
-  padding: 10px;
+  padding: 15px;
+  padding-bottom: 30px;
+}
+
+#photo {
+  border: black;
+  border-width: 13px;
 }
 
 #main-photo {
   display: flex;
   flex-direction: column;
+  margin-left: 40px;
 }
 
-#comments {
-  /* text-align: right; */
+#comment-body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  position: fixed;
+  top: 80px;
+  right: 150px;
+  font-size: 20px;
+  display: block;
+}
+
+#comment-submit {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: fixed;
+  top: 140px;
+  right: 10px;
+}
+
+#comment-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: fixed;
+  top: 20px;
+  right: 300px;
+  font-size: 30px;
 }
 
 #title {

@@ -7,30 +7,15 @@
     <% photos.forEach(photo => { %>
       <li>
         <a href="/photos/<%= photo._id %>"><%= photo.name %>
-          
-          <!-- Placeholder image: -->
-            <img src="<%= photo.image %>" width="400">
+        
+            <img src="<%= photo.image %>" width="400" id="photo">
         </a>
         
       </li> 
       <% }) %> 
   </ul>
 
-
-  <!-- <section>
-    <div>Title</div>
-    <img src="https://i.imgur.com/xElo1Sm.jpg" width="300">
-    <p>Gecko sitting in bowl</p>
-  </section> -->
-
 </section>
-
-
-
-
-
-
-
 
 
 <%- include('../partials/footer') %>

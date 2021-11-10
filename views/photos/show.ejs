@@ -3,7 +3,7 @@
 
 <section id="main-photo">
   <div>title</div>
-  <img src="<%= photo.image %>" width="500">
+  <img src="<%= photo.image %>" width="600">
   <p>caption</p>
   <% if (photo.owner.equals(user?.profile._id)) { %>
     <form action="/photos/<%= photo._id %>?_method=DELETE" method="POST">
@@ -11,14 +11,16 @@
     </form>
   <% } %>
 </section>
-<h2>Comments</h2>
+<h2 id="comment-title">Comments</h2>
+<section id="comment-body">
   <ul> 
     <% photo.comments.forEach(comment => { %> 
       <li> <%= comment.content %> 
       </li>
         <% }) %>
   </ul>
-
+</section>
+<section id="comment-submit">
   <form action="/photos/<%= photo._id %>" method="POST">
     <label for="content-textarea">Comment:</label>
     <textarea name="content" id="content-textarea"></textarea>
