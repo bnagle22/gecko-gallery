@@ -1,3 +1,7 @@
+nav {
+  background: rgb(222, 128, 29);
+}
+
 .siwg {
   background: url(/images/auth/google/siwg_light_normal.png);
   cursor: pointer;
