@@ -11,8 +11,8 @@ Trello:
 https://trello.com/b/rSIYTSUm/gecko-gallery
 
 # Screenshots
-* ![In-Game-Screenshots](./images/screen2.png)
-* ![In-Game-Screenshots](./images/screen1.png)
+![In-Game-Screenshots](./images/screen2.png)
+![In-Game-Screenshots](./images/screen1.png)
 
 # Technologies used
 * Javascript
