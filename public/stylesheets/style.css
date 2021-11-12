@@ -68,7 +68,7 @@ li {
   flex-direction: column;
   align-items: flex-end;
   position: fixed;
-  top: 80px;
+  top: 140px;
   right: 150px;
   font-size: 20px;
   display: block;
@@ -79,8 +79,8 @@ li {
   flex-direction: column;
   align-items: flex-end;
   position: fixed;
-  top: 140px;
-  right: 10px;
+  top: 85px;
+  right: 40px;
 }
 
 #comment-title {
@@ -96,4 +96,12 @@ li {
 #title {
   text-align: center;
   font-size: 50px;
+}
+
+#nav-links {
+  display: flex;
+  align-items: flex-end;
+  position: fixed;
+  right: 10px;
+  font-size: 18px;
 }

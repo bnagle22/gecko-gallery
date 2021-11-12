@@ -11,7 +11,10 @@ nav {
 }
 
 .siwg-link {
-  display: inline-block;
+  display: flex;
+  align-items: flex-end;
+  position: fixed;
+  left: 10px;
 }
 
 .siwg:focus,

@@ -2,9 +2,9 @@
 <%- include('../partials/nav') %>
 
 <section id="main-photo">
-  <div>title</div>
+  <!-- <div>title</div> -->
   <img src="<%= photo.image %>" width="600">
-  <p>caption</p>
+  <!-- <p>caption</p> -->
   <% if (photo.owner.equals(user?.profile._id)) { %>
     <form action="/photos/<%= photo._id %>?_method=DELETE" method="POST">
       <button class="btn" type="submit">Delete this photo</button>
@@ -12,20 +12,21 @@
   <% } %>
 </section>
 <h2 id="comment-title">Comments</h2>
-<section id="comment-body">
-  <ul> 
-    <% photo.comments.forEach(comment => { %> 
-      <li> <%= comment.content %> 
-      </li>
-        <% }) %>
-  </ul>
-</section>
 <section id="comment-submit">
   <form action="/photos/<%= photo._id %>" method="POST">
     <label for="content-textarea">Comment:</label>
     <textarea name="content" id="content-textarea"></textarea>
     <button type="submit">Add Comment</button>
   </form>
+</section>
+<section id="comment-body">
+  <ul> 
+    <% photo.comments.forEach(comment => { %> 
+      <li> <%= comment.content %> <br>
+      </li>
+        <% }) %>
+        
+  </ul>
 </section>
 
 <%- include('../partials/footer') %>
