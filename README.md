@@ -11,14 +11,15 @@ Trello:
 https://trello.com/b/rSIYTSUm/gecko-gallery
 
 # Screenshots
-![In-Game-Screenshots](./images/screen2.png)
-![In-Game-Screenshots](./images/screen1.png)
+![In-Game-Screenshots](./public/images/screen2.png)
+![In-Game-Screenshots](./public/images/screen1.png)
 
 # Technologies used
 * Javascript
 * Express
-* HTML
+* EJS
 * CSS
+* MongoDB
 
 # Next Steps
 * Include additional functionality- allow users to modify comments and like photos
