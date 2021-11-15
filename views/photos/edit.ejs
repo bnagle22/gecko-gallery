@@ -1,0 +1,20 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Gecko Gallery</h1>
+
+  <h2>Update Image</h2>
+  <form action="/photos/<%= photo._id %>?_method=PUT" method="POST">
+    <label>
+      Photo URL:
+      <input type="text" name="image" autocomplete="off">
+    </label>
+    <button type="submit">Edit photo</button>
+  </form>
+  
+
+</section>
+
+
+<%- include('../partials/footer') %>

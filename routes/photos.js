@@ -13,6 +13,12 @@ router.get('/new', isLoggedIn, photosCtrl.new)
 // localhost:3000/photos/:id - GET
 router.get('/:id', photosCtrl.show)
 
+// localhost:3000/photos/:id/edit - GET
+router.get('/:id/edit', photosCtrl.edit)
+
+// localhost:3000/photos/:id - PUT
+router.put('/:id', photosCtrl.update)
+
 // localhost:3000/photos/ - POST
 router.post('/', isLoggedIn, photosCtrl.create)
 

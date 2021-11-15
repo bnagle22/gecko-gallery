@@ -74,11 +74,45 @@ function deletePhoto(req, res) {
   })
 }
 
+function edit(req, res) {
+  Photo.findById(req.params.id)
+  .then(photo => {
+    res.render("photos/edit", {
+      title: "Edit photo",
+      photo
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/photos")
+  })
+}
+
+function update(req, res) {
+  Photo.findById(req.params.id)
+  .then(photo => {
+    if (photo.owner.equals(req.user.profile._id)) {
+      photo.updateOne(req.body, {new: true})
+      .then(() => {
+        res.redirect(`/photos/${photo._id}`)
+      })
+    } else {
+      throw new Error ("Not authorized")
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/photos")
+  })
+}
+
 export {
   index,
   show,
   create,
   newPhoto as new,
   newComment as comment,
-  deletePhoto as delete
+  deletePhoto as delete,
+  edit,
+  update
 }
