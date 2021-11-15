@@ -99,9 +99,15 @@ li {
 }
 
 #nav-links {
+  color: black;
   display: flex;
   align-items: flex-end;
   position: fixed;
-  right: 10px;
+  right: 15px;
   font-size: 18px;
+}
+
+#all-photos, #upload-photo {
+  margin: 0 5px;
+  color: black;
 }
