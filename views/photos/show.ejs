@@ -7,10 +7,10 @@
   <!-- <p>caption</p> -->
   <% if (photo.owner.equals(user?.profile._id)) { %>
     <form action="/photos/<%= photo._id %>?_method=DELETE" method="POST">
-      <button class="btn" type="submit">Delete this photo</button>
+      <button id="delete-btn" class="btn" type="submit">Delete this photo</button>
     </form>
     <form action="/photos/<%= photo._id %>/edit" method="GET">
-      <button class="btn" type="submit">Edit this photo</button>
+      <button id="edit-btn" class="btn" type="submit">Edit this photo</button>
     </form>
   <% } %>
 </section>

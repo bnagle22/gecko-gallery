@@ -112,3 +112,31 @@ li {
   margin: 0 5px;
   color: black;
 }
+
+#delete-btn {
+  background-color: rgb(215, 19, 19);
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  font-size: 16px;
+  display: block;
+  border-radius: 8px;
+  margin: 5px;
+  cursor: pointer;
+  margin-left: 620px;
+  margin-top: -125px;
+}
+
+#edit-btn {
+  background-color:rgb(26, 179, 21);
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  font-size: 16px;
+  display: block;
+  border-radius: 8px;
+  margin: 5px;
+  cursor: pointer;
+  margin-left: 620px;
+  margin-top: -60px;
+}
