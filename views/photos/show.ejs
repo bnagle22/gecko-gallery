@@ -17,19 +17,19 @@
 <h2 id="comment-title">Comments</h2>
 <section id="comment-submit">
   <form action="/photos/<%= photo._id %>" method="POST">
-    <label for="content-textarea">Comment:</label>
     <textarea name="content" id="content-textarea"></textarea>
-    <button type="submit">Add Comment</button>
+    <button id="add-comment-btn" type="submit">Add Comment</button>
   </form>
 </section>
-<section id="comment-body">
-  <ul> 
-    <% photo.comments.forEach(comment => { %> 
-      <li> <%= comment.content %> <br>
-      </li>
+  <section id="comment-body">
+    <ul> 
+      <% photo.comments.forEach(comment => { %> 
+        <li> • <%= comment.content %> <br>
+        </li>
         <% }) %>
         
-  </ul>
-</section>
+      </ul>
+    </section>
+
 
 <%- include('../partials/footer') %>
