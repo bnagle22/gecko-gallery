@@ -5,8 +5,6 @@ and write comments on photos in the gallery.
 Users are able to delete any photos that they have posted.
 
 # Getting Started
-Link:
-https://gecko-gallery.herokuapp.com/
 Trello:
 https://trello.com/b/rSIYTSUm/gecko-gallery
 
